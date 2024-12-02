@@ -3,72 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mensagem</title>
+    <title>Declaração Anônima</title>
     <style>
         body {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f0f8ff;
-            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #74ebd5, #acb6e5);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
         }
         .container {
             text-align: center;
-            padding: 20px;
-            border: 2px solid #ccc;
-            border-radius: 10px;
+            padding: 30px;
+            border-radius: 15px;
             background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 90%;
         }
         .container h1 {
             color: #333;
+            font-size: 1.8em;
+            margin-bottom: 15px;
         }
         .container p {
-            font-size: 18px;
-            color: #666;
+            font-size: 16px;
+            color: #555;
+            margin: 10px 0;
         }
         .form-group {
-            margin-top: 20px;
+            margin-top: 15px;
+            text-align: left;
         }
-        .form-group textarea {
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            color: #444;
+            margin-bottom: 5px;
+        }
+        .form-group textarea,
+        .form-group input {
             width: 100%;
-            height: 100px;
             padding: 10px;
             border-radius: 5px;
-            border: 1px solid #ccc;
-            font-size: 16px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+            margin-bottom: 15px;
         }
         .form-group button {
             padding: 10px 20px;
-            margin-top: 10px;
             border: none;
             border-radius: 5px;
             font-size: 16px;
             cursor: pointer;
             background-color: #4CAF50;
             color: white;
+            transition: background-color 0.3s;
+        }
+        .form-group button:hover {
+            background-color: #45a049;
+        }
+        footer {
+            margin-top: 15px;
+            font-size: 12px;
+            color: #777;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1> mensagem feita por Thauan </h1>
-        <p> Desde o momento em que te conheci, não consigo parar de pensar em você.
-Você trouxe luz e alegria à minha vida de uma maneira que ninguém jamais fez.
-Talvez eu não demonstre muito, mas estou voltando a confiar em algo assim.
-É arriscado e até uma loucura, mas mesmo assim,
-estou disposto a tentar, independentemente da sua resposta. </p>
-        <p>escreva sua resposta abaixo:</p>
+        <h1>Deixe sua opinião anonimamente</h1>
+        <p>Esta aba é completamente anônima. Seja sincero e fale o que pensa sobre mim!</p>
         <form action="https://formspree.io/f/xwpeoklg" method="post">
             <div class="form-group">
-                <textarea name="response" placeholder="Escreva sua resposta aqui..." required></textarea>
+                <label for="thoughts">O que você pensa sobre mim?</label>
+                <textarea id="thoughts" name="thoughts" placeholder="Compartilhe sua opinião..." required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="first-impression">Qual foi sua primeira impressão sobre mim?</label>
+                <textarea id="first-impression" name="first_impression" placeholder="Escreva sua resposta aqui..." required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="future-feedback">O que você gostaria que eu melhorasse?</label>
+                <textarea id="future-feedback" name="future_feedback" placeholder="Compartilhe suas sugestões..." required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="anonymous-name">Seu nome (opcional):</label>
+                <input type="text" id="anonymous-name" name="anonymous_name" placeholder="Digite aqui...">
             </div>
             <div class="form-group">
                 <button type="submit">Enviar</button>
             </div>
         </form>
+        <footer>Suas respostas são confidenciais e apenas para reflexão pessoal.</footer>
     </div>
 </body>
 </html>
